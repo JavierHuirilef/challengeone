@@ -3,19 +3,25 @@ let amigo = document.getElementById('amigo');
 let listaDeAmigos = [];
 let ullistaDeAmigos = document.getElementById('listaAmigos');
 
-function agregarAmigo() {
+function agregarAmigo(){
     let nombreAmigo = amigo.value;
-    if (nombreAmigo === '') {
-        alert("Favor indicar Nombre para continuar");
+    if(nombreAmigo === ''){
+        alert("El campo nombre está vacío, porfavor ingresa un nombre");
         return;
-    } else if (!isNaN(nombreAmigo)) { // Nueva verificación
-        alert("Indique un valor correcto (sólo texto)");
+    }else if(!isNaN(nombreAmigo)){
+        alert("Debes ingresar un nombre válido (sólo letras)");
         return;
-    } else {
-        listaDeAmigos.push(nombreAmigo); // agrega amigo a la lista
-        ullistaDeAmigos.innerHTML = ullistaDeAmigos.innerHTML + `<li>${nombreAmigo}</li>`;
-    }
+    }else if (listaDeAmigos.includes(nombreAmigo)) { 
+        alert("Este nombre ya ha sido ingresado");
+        return;
+    } else{
+        listaDeAmigos.push(nombreAmigo);//agrega amigo a la lista
+        ulListaDeAmigos.innerHTML = ulListaDeAmigos.innerHTML + <li>${nombreAmigo}</li>;
+        limpiarCampoNombre();
+    }   
 };
+
+
 
 
 
