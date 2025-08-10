@@ -35,6 +35,13 @@ function sortearAmigo(){
         return;
     };
     }
+function limpiarCampoNombre(){ 
+    document.getElementById('amigo').value='';
+}    
+function limpiarLista(){
+    listaDeAmigos = []; 
+    ulListaDeAmigos.innerHTML = '';
+}
 
 
 
