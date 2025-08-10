@@ -26,12 +26,12 @@ function sortearAmigo(){
         alert("La lista no debe estar vacía");
         return;
     }else if(listaDeAmigos.length < 2) {
-        alert("antidad de participantes inferior al minimo (2 o más para continuar)");
+        alert("Cantidad de participantes inferior al minimo (2 o más para continuar)");
         return;
     } {
         let posicionAleatoria = Math.floor(Math.random()*listaDeAmigos.length);
         let amigoSorteado = listaDeAmigos[posicionAleatoria];
-        alert("El amigo secreto sorteado es ${amigoSorteado}");
+        alert(`El amigo secreto sorteado es ${amigoSorteado}`);
         limpiarLista();
         return;
     };
@@ -44,7 +44,6 @@ function limpiarLista(){
     listaDeAmigos = []; 
     ulListaDeAmigos.innerHTML = '';
 }
-
 
 
 
